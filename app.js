@@ -102,7 +102,7 @@ const jobRemindOrder = new CronJob(
 );
 
 const jobRemindReheat = new CronJob(
-  '*/30 * * * * 1-5',
+  '*/5 * * * 1-5',
   async () => {
     reheatIdx += 1;
     const orders = await getData(FILE_PATHS.ORDER);
