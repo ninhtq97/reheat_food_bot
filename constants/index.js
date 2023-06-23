@@ -1,9 +1,9 @@
 exports.KEY = {
   ORDER: /((\/order@(.+?)|\/order) (.+))|\/order/,
-  LIST_RANDOM: /\/listrandom/,
+  LIST_RANDOM: /(\/listrandom@(.+?))|\/listrandom/,
 };
 
-exports.GROUP_ID = -728595425;
+exports.GROUP_ID = -927404220;
 exports.BOT_TOKEN = '6166433874:AAFOq2o49tK6nVDFycpIVGLMY7B7JOkiCyE';
 
 exports.DIR_PATHS = {
