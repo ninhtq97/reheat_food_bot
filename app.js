@@ -147,7 +147,22 @@ const jobRandomList = new CronJob(
 
       bot.sendChatAction(GROUP_ID, 'typing');
       await bot.sendMessage(GROUP_ID, message);
+    }
+  },
+  null,
+  true,
+  'Asia/Ho_Chi_Minh',
+);
 
+const jobStartReheat = new CronJob(
+  '30 11 * * 1-5',
+  async () => {
+    bot.sendChatAction(GROUP_ID, 'typing');
+
+    const orders = await getData(FILE_PATHS.ORDER);
+    const sortedOrders = await getData(FILE_PATHS.REHEATING);
+
+    if (sortedOrders.length) {
       bot.sendMessage(
         GROUP_ID,
         `${getViewName(
